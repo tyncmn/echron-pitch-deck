@@ -1223,9 +1223,172 @@
   .tl-event { font-size: 0.85rem; color: var(--text-primary); }
 
   /* ═══════════════════════════════════════
-     SLIDE 10 — THE ASK
+     SLIDE 10 — TEAM
   ═══════════════════════════════════════ */
   #slide-10 .slide-bg {
+    background: radial-gradient(ellipse at 40% 40%, #0a1a12 0%, #050d04 55%),
+                radial-gradient(ellipse at 80% 80%, #0d1a0a 0%, transparent 45%);
+  }
+
+  .team-layout {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 50px 80px;
+    gap: 32px;
+  }
+
+  .team-header { display: flex; flex-direction: column; gap: 10px; }
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    flex: 1;
+    align-content: center;
+  }
+
+  .team-card {
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .team-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--glass-border-strong);
+  }
+
+  .team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 2px solid rgba(34,197,94,0.3);
+    box-shadow: 0 0 30px rgba(34,197,94,0.15);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .team-card:hover .team-photo {
+    border-color: var(--green-glow);
+    box-shadow: 0 0 40px rgba(34,197,94,0.3);
+  }
+
+  .team-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  .team-role {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(34,197,94,0.3);
+    color: var(--green-glow);
+    background: rgba(34,197,94,0.06);
+  }
+
+  .team-desc {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ═══════════════════════════════════════
+     SLIDE 11 — SUCCESS
+  ═══════════════════════════════════════ */
+  #slide-11 .slide-bg {
+    background: radial-gradient(ellipse at 50% 50%, #1a1a05 0%, #050d04 55%),
+                radial-gradient(ellipse at 80% 20%, #0d1a0a 0%, transparent 45%);
+  }
+
+  .success-layout {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    height: 100%;
+    padding: 50px 80px;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .success-left { display: flex; flex-direction: column; gap: 24px; }
+
+  .success-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .diploma-img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 16px;
+    border: 1px solid rgba(245,158,11,0.3);
+    box-shadow:
+      0 0 60px rgba(245,158,11,0.12),
+      0 20px 60px rgba(0,0,0,0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .diploma-img:hover {
+    transform: scale(1.02);
+    box-shadow:
+      0 0 80px rgba(245,158,11,0.2),
+      0 24px 70px rgba(0,0,0,0.6);
+  }
+
+  .medal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .medal-card {
+    padding: 18px 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    border-radius: 14px;
+  }
+
+  .medal-icon { font-size: 2rem; }
+
+  .medal-count {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .medal-label {
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  /* ═══════════════════════════════════════
+     SLIDE 12 — THE ASK
+  ═══════════════════════════════════════ */
+  #slide-12 .slide-bg {
     background: radial-gradient(ellipse at 50% 40%, #0d2008 0%, #050d04 55%),
                 radial-gradient(ellipse at 90% 90%, #1a0a00 0%, transparent 40%);
   }
@@ -1378,6 +1541,8 @@
   #slide-8 .slide-bg-img { opacity: 0.14; filter: brightness(0.6) saturate(0.7); }
   #slide-9 .slide-bg-img { opacity: 0.16; }
   #slide-10 .slide-bg-img { opacity: 0.15; }
+  #slide-11 .slide-bg-img { opacity: 0.16; filter: brightness(0.5) saturate(0.7); }
+  #slide-12 .slide-bg-img { opacity: 0.15; }
 
   /* ── Animated BG Grids ── */
   .bg-grid {
@@ -1603,7 +1768,27 @@
       gap: 20px;
     }
 
-    /* ══ SLIDE 10 — ASK ══ */
+    /* ══ SLIDE 10 — TEAM ══ */
+    .team-layout {
+      padding: 56px 20px 120px;
+      gap: 20px;
+    }
+    .team-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .team-photo { width: 90px; height: 90px; }
+
+    /* ══ SLIDE 11 — SUCCESS ══ */
+    .success-layout {
+      grid-template-columns: 1fr;
+      padding: 56px 20px 120px;
+      gap: 20px;
+    }
+    .medal-grid { grid-template-columns: repeat(4, 1fr); gap: 8px; }
+    .diploma-img { max-width: 100%; }
+
+    /* ══ SLIDE 12 — ASK ══ */
     .ask-layout {
       grid-template-columns: 1fr;
       padding: 56px 20px 120px;
@@ -1634,6 +1819,8 @@
     .comp-layout,
     .tech-layout,
     .traction-layout,
+    .team-layout,
+    .success-layout,
     .ask-layout {
       padding-left: 16px;
       padding-right: 16px;
@@ -2454,14 +2641,133 @@
   </div>
 
   <!-- ═══════════════════════════════════════
-       SLIDE 10: THE ASK
+       SLIDE 10: THE TEAM
   ═══════════════════════════════════════ -->
   <div class="slide" id="slide-10">
+    <div class="slide-bg">
+      <div class="bg-grid" style="opacity:0.4;"></div>
+      <div class="particles" id="p10-particles"></div>
+    </div>
+    <div class="noise-overlay"></div>
+
+    <div class="team-layout">
+      <div class="team-header">
+        <span class="slide-label">10 / THE TEAM</span>
+        <h2 class="headline-lg">The People <span class="accent-text">Behind</span> the <span class="cyan-text">Platform.</span></h2>
+        <p class="body-text" style="max-width:600px;">A multidisciplinary team of engineers and strategists, united by the mission to democratize soil intelligence for every farmer on earth.</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Tunjay -->
+        <div class="team-card glass">
+          <img src="assets/tunjay.jpg" alt="Tunjay Isgandarli" class="team-photo">
+          <div class="team-name">Tunjay Isgandarli</div>
+          <div class="team-role">CEO</div>
+          <div class="team-desc">Strategic vision & business development. Leads go-to-market strategy across CIS and MENA regions.</div>
+        </div>
+
+        <!-- Jahid -->
+        <div class="team-card glass">
+          <img src="assets/jahid.jpeg" alt="Jahid Jabizade" class="team-photo">
+          <div class="team-name">Jahid Jabizade</div>
+          <div class="team-role">CTO</div>
+          <div class="team-desc">Architect of the ECHRON platform. Leads hardware design, firmware, and backend infrastructure.</div>
+        </div>
+
+        <!-- Javid -->
+        <div class="team-card glass">
+          <img src="assets/javid.jpeg" alt="Javid Jalilov" class="team-photo">
+          <div class="team-name">Javid Jalilov</div>
+          <div class="team-role">CIO</div>
+          <div class="team-desc">Data architecture & systems integration. Oversees cloud infrastructure and API strategy.</div>
+        </div>
+
+        <!-- Ilham -->
+        <div class="team-card glass">
+          <img src="assets/ilham.jpeg" alt="Ilham Suleymanov" class="team-photo">
+          <div class="team-name">Ilham Suleymanov</div>
+          <div class="team-role">CPO</div>
+          <div class="team-desc">Product design & user experience. Translates farmer needs into intuitive, actionable interfaces.</div>
+        </div>
+      </div>
+
+      <div style="display:flex; gap:14px; align-items:center; padding:16px 22px; border-radius:14px; background:rgba(34,197,94,0.04); border:1px solid rgba(34,197,94,0.12);">
+        <span style="font-size:1.5rem;">🏛️</span>
+        <div style="font-size:0.85rem; color:var(--text-secondary);">
+          <strong style="color:var(--text-primary);">Based in Baku, Azerbaijan</strong> · Remote-first operations · Supported by Kyocoda · Deep expertise in IoT, AI/ML, and agricultural systems.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SLIDE 11: SUCCESS
+  ═══════════════════════════════════════ -->
+  <div class="slide" id="slide-11">
+    <div class="slide-bg">
+      <div class="bg-grid" style="opacity:0.35;"></div>
+    </div>
+    <div class="noise-overlay"></div>
+
+    <div class="success-layout">
+      <div class="success-left">
+        <span class="slide-label">11 / SUCCESS</span>
+        <h2 class="headline-lg">Internationally <span class="amber-text">Recognized.</span></h2>
+        <p class="body-text">We are returning with great pride and joy from the <strong style="color:var(--text-primary);">51st International Exhibition of Inventions</strong> held in Geneva. Azerbaijan achieved remarkable success on this prestigious platform.</p>
+
+        <div class="medal-grid">
+          <div class="medal-card glass">
+            <div class="medal-icon">🏅</div>
+            <div class="medal-count" style="color:var(--amber);">4</div>
+            <div class="medal-label">Total Medals</div>
+          </div>
+          <div class="medal-card glass">
+            <div class="medal-icon">🥇</div>
+            <div class="medal-count" style="color:#fbbf24;">1</div>
+            <div class="medal-label">Gold</div>
+          </div>
+          <div class="medal-card glass">
+            <div class="medal-icon">🥈</div>
+            <div class="medal-count" style="color:#94a3b8;">1</div>
+            <div class="medal-label">Silver</div>
+          </div>
+          <div class="medal-card glass">
+            <div class="medal-icon">🥉</div>
+            <div class="medal-count" style="color:#d97706;">2</div>
+            <div class="medal-label">Bronze</div>
+          </div>
+        </div>
+
+        <div class="glass-strong" style="padding:22px 26px; display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <span style="font-size:2rem;">🥉</span>
+            <div>
+              <div style="font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; color:var(--text-primary);">ECHRON — Bronze Medal</div>
+              <div style="font-size:0.82rem; color:var(--text-secondary);">Presented on behalf of <strong style="color:var(--cyan-glow);">Kyocoda</strong> at the Salon International des Inventions de Genève</div>
+            </div>
+          </div>
+          <div style="font-size:0.8rem; color:var(--text-secondary); line-height:1.6; border-top:1px solid rgba(245,158,11,0.15); padding-top:12px;">
+            Recognized for innovation in <strong style="color:var(--amber);">offline-capable soil intelligence</strong>, mesh networking for agriculture, and explainable AI for emerging markets.
+          </div>
+          <div style="font-family:'Space Mono',monospace; font-size:10px; color:rgba(245,158,11,0.5); letter-spacing:0.1em;">GENEVA · MARCH 14, 2026</div>
+        </div>
+      </div>
+
+      <div class="success-right">
+        <img src="assets/diplom.jpg" alt="Geneva Inventions Bronze Medal Diploma" class="diploma-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SLIDE 12: THE ASK
+  ═══════════════════════════════════════ -->
+  <div class="slide" id="slide-12">
     <div class="slide-bg">
       <div class="slide-bg-img" style="background-image:url('assets/10.png');"></div>
       <div class="orb-1" style="background:radial-gradient(circle,rgba(34,197,94,0.1) 0%,transparent 70%);"></div>
       <div class="bg-grid" style="opacity:0.4;"></div>
-      <div class="particles" id="p10-particles"></div>
+      <div class="particles" id="p12-particles"></div>
     </div>
     <div class="noise-overlay"></div>
 
@@ -2469,7 +2775,7 @@
     <div class="ask-layout">
       <div class="ask-left">
         <div>
-          <span class="slide-label">10 / THE ASK</span>
+          <span class="slide-label">12 / THE ASK</span>
           <div style="margin-top:14px; font-family:'Space Mono',monospace; font-size:11px; color:var(--text-secondary); letter-spacing:0.15em; text-transform:uppercase;">Seed Round — 2025</div>
         </div>
 
@@ -2565,7 +2871,7 @@
 <button id="nav-show-tab" onclick="toggleNav()" title="Show navigation">▲ NAV</button>
 
 <script>
-  const TOTAL = 10;
+  const TOTAL = 12;
   let current = 1;
   let isAnimating = false;
 
@@ -2668,7 +2974,8 @@
   }
 
   spawnParticles('p1-particles', 30);
-  spawnParticles('p10-particles', 30);
+  spawnParticles('p10-particles', 20);
+  spawnParticles('p12-particles', 30);
 
   updateUI();
 </script>
